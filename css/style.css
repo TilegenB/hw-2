@@ -1,0 +1,7 @@
+.container {
+    width: 100%;
+    background-color: rgba(182, 109, 109, 0.541);
+    min-height: 200px;
+    margin-left: 200px;
+    margin-right: 100px;
+}
