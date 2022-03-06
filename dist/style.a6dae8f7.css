@@ -32,6 +32,7 @@ body {
   font-family: Raleway, Arial, sans-serif;
   display: flex;
   flex-flow: column wrap;
+  font-size: 18px;
 }
 
 .button {
@@ -186,6 +187,9 @@ body {
   text-align: center;
 }
 
+.our-work {
+  margin-bottom: 115px;
+}
 .our-work__list {
   display: flex;
   flex-flow: row wrap;
@@ -228,6 +232,51 @@ body {
 .our-work-text {
   margin-bottom: 15px;
   font-size: 18px;
+}
+
+.our-team {
+  padding: 0 170px;
+  margin-bottom: 115px;
+}
+.our-team__list {
+  display: flex;
+  flex-flow: row wrap;
+}
+.our-team__item {
+  width: 25%;
+}
+
+.our-team-img {
+  margin-bottom: 30px;
+}
+
+.our-team-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.our-team-position {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 18px;
+  color: #FF4343;
+  margin-bottom: 20px;
+}
+
+.our-team-text {
+  color: #6C7279;
+  margin-bottom: 35px;
+}
+
+.social-team__list {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.social-team__item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .footer {
