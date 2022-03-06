@@ -156,9 +156,10 @@ body {
 
 .feature__list {
   width: 1170px;
-  display: flex;
-  flex-flow: row wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
+  row-gap: 90px;
 }
 
 .feature__item {
@@ -166,7 +167,6 @@ body {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  margin-bottom: 90px;
 }
 
 .feature__img {
@@ -206,10 +206,10 @@ body {
 .our-work-link:hover .our-work-link__content,
 .our-work-link:focus .our-work-link__content {
   display: block;
-  background-color: #ff434380;
+  background-color: rgba(255, 67, 67, 0.8);
   width: 377px;
   height: 339px;
-  transition: all linear 0.2s;
+  transition: display linear 0.2s;
 }
 
 .our-work-link__content {
@@ -277,6 +277,39 @@ body {
 
 .social-team__item:not(:last-child) {
   margin-right: 10px;
+}
+
+.reviews-content {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.reviews-content img {
+  width: 50%;
+}
+
+.reviews-content--text {
+  width: 50%;
+  overflow: hidden;
+  padding-left: 120px;
+  padding-top: 115px;
+  padding-right: 170px;
+  background-color: #5C3249;
+  color: #fff;
+}
+
+.reviews-title {
+  font-size: 36px;
+  font-family: Cardo, Arial, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.reviews-text {
+  align-items: center;
+  margin: 0 auto;
+  font-family: 13px;
+  text-transform: uppercase;
 }
 
 .footer {
