@@ -35,6 +35,18 @@ body {
   font-size: 18px;
 }
 
+@font-face {
+  font-family: Raleway;
+  src: url(/Raleway-Regular.3d3f1126.woff2), url(/Raleway-Regular.032a7e37.ttf);
+}
+@font-face {
+  font-family: Cardo;
+  src: url(/Cardo-Regular.ea4e3797.woff2), url(/Cardo-Regular.b5258b1e.ttf);
+}
+@font-face {
+  font-family: Cardo-italic;
+  src: url(/Cardo-Italic.2801f9da.woff2), url(/Cardo-Italic.c334529b.ttf);
+}
 .button {
   text-transform: uppercase;
   cursor: pointer;
@@ -43,6 +55,12 @@ body {
   font-family: Raleway, Arial, serif;
   font-weight: 600;
   border: none;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #E71414;
+  transition: background-color ease-in 0.2s;
 }
 
 .button--red {
@@ -134,12 +152,6 @@ body {
   padding: 20px 90px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 120px;
-}
-
-.banner__button:hover,
-.banner__button:focus {
-  background-color: #E71414;
-  transition: background-color ease-in 0.2s;
 }
 
 .banner__button--active {
@@ -279,6 +291,14 @@ body {
   margin-right: 10px;
 }
 
+.reviews {
+  margin-bottom: 115px;
+}
+
+.reviews-carousel {
+  margin-bottom: 30px;
+}
+
 .reviews-content {
   display: flex;
   flex-flow: row wrap;
@@ -300,9 +320,8 @@ body {
 
 .reviews-title {
   font-size: 36px;
-  font-family: Cardo, Arial, sans-serif;
+  font-family: Cardo-italic, Arial, sans-serif;
   font-weight: 400;
-  font-style: italic;
 }
 
 .reviews-text {
@@ -312,10 +331,103 @@ body {
   text-transform: uppercase;
 }
 
+.reviews-page {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.reviews-page__item:not(:last-child) {
+  margin-right: 25px;
+}
+.reviews-page__item button {
+  border: 1px solid #5C3249;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background: transparent;
+}
+.reviews-page__item--active button {
+  background: #5C3249;
+  cursor: default;
+}
+
+.download {
+  width: 1170px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 115px;
+}
+
+.download-title {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.download-text {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 45px;
+}
+
+.download-button {
+  padding: 20px 70px;
+}
+
 .footer {
   flex-grow: 2;
-  background-color: azure;
-  min-height: 200px;
+  position: fixed;
+  bottom: 0;
+  font-family: "Raleway", "Arial", serif;
+  font-weight: 400;
+}
+
+.top-footer {
+  padding: 0 170px;
+  background-color: #353C65;
+  padding-top: 70px;
+  color: #fff;
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+}
+
+.footer-location,
+.footer-social,
+.footer-aboutus {
+  width: 33%;
+}
+
+.footer-social-title {
+  font-family: Raleway, Arial, serif;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.footer-social-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.footer-social__item:not(:last-child) {
+  margin-right: 25px;
+}
+
+.bottom-footer {
+  padding: 22px 170px;
+  min-height: 90px;
+  background-color: #2C3154;
+  text-align: center;
+}
+
+.footer-copyright-text {
+  width: 370px;
+  display: inline-block;
+  text-align: center;
+  color: #808080;
+}
+.footer-copyright-text b {
+  color: #fff;
 }
 
 /*# sourceMappingURL=/style.a6dae8f7.css.map */

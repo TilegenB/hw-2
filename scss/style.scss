@@ -4,12 +4,15 @@ $secondary-color:#000;
 $border-color:#BABBC5;
 $gray-color:#6C7279;
 $active-color:#E71414;
+$copyright-color:#808080;
 
 $header-background-color:#252B49;
 $button1-background-color:#FF4343;
 $button1-hover-color: $active-color;
 $our-work-background: rgba(255, 67, 67, 0.8);
 $reviews-background:#5C3249;
+$top-footer-background:#353C65;
+$bottom-footer-background:#2C3154;
 
 .visually-hidden {
     position: absolute;
@@ -47,7 +50,21 @@ body {
     flex-flow: column wrap;
     font-size: 18px;
 }
-
+@font-face {
+    font-family: Raleway;
+    src: url(../font/Raleway/Raleway-Regular.woff2),
+    url(../font/Raleway/Raleway-Regular.ttf);
+}
+@font-face {
+    font-family: Cardo;
+    src: url(../font/Cardo/Cardo-Regular.woff2),
+    url(../font/Cardo/Cardo-Regular.ttf);
+}
+@font-face {
+    font-family: Cardo-italic;
+    src: url(../font/Cardo/Cardo-Italic.woff2),
+    url(../font/Cardo/Cardo-Italic.ttf);
+}
 .button {
     text-transform: uppercase;
     cursor: pointer;
@@ -57,7 +74,11 @@ body {
     font-weight: 600;
     border: none;
 }
-
+.button:hover,
+.button:focus {
+    background-color: $button1-hover-color;
+    transition: background-color ease-in .2s;
+}
 .button--red {
     background-color: $button1-background-color;
 }
@@ -151,12 +172,6 @@ body {
     padding: 20px 90px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.250);
     margin-bottom: 120px;
-}
-
-.banner__button:hover,
-.banner__button:focus {
-    background-color: $button1-hover-color;
-    transition: background-color ease-in .2s;
 }
 
 .banner__button--active {
@@ -283,6 +298,12 @@ body {
 .social-team__item:not(:last-child) {
     margin-right: 10px;
 }
+.reviews {
+    margin-bottom: 115px;
+}
+.reviews-carousel {
+    margin-bottom: 30px;
+}
 .reviews-content {
     display: flex;
     flex-flow: row wrap;
@@ -301,9 +322,9 @@ body {
 }
 .reviews-title {
     font-size: 36px;
-    font-family: Cardo, Arial, sans-serif;
+    font-family: Cardo-italic, Arial, sans-serif;
     font-weight: 400;
-    font-style: italic;
+    // font-style: italic;
 }
 .reviews-text {
     align-items: center;
@@ -311,8 +332,90 @@ body {
     font-family: 13px;
     text-transform: uppercase;
 }
+.reviews-page {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+&__item:not(:last-child) {
+    margin-right: 25px;
+}
+&__item button {
+    border: 1px solid $reviews-background;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: transparent;
+}
+&__item--active button {
+    background: $reviews-background;
+    cursor: default;
+}
+}
+.download {
+    width: 1170px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 115px;
+}
+.download-title {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.download-text {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 45px;
+}
+.download-button {
+    padding: 20px 70px;
+}
 .footer {
     flex-grow: 2;
-    background-color: azure;
-    min-height: 200px;
+    position: fixed;
+    bottom: 0;
+    font-family: 'Raleway', 'Arial', serif;
+    font-weight: 400;
+}
+.top-footer {
+    padding: 0 170px;
+    background-color: $top-footer-background; 
+    padding-top: 70px;
+    color: $primary-color;
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+.footer-location,
+.footer-social,
+.footer-aboutus {
+    width: 33%;
+}
+.footer-social-title {
+    font-family: Raleway, Arial, serif;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.footer-social-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.footer-social__item:not(:last-child) {
+    margin-right: 25px;
+}
+.bottom-footer {
+    padding: 22px 170px;
+    min-height: 90px;
+    background-color: $bottom-footer-background;
+    text-align: center;
+}
+.footer-copyright-text {
+    width: 370px;
+    display: inline-block;
+    text-align: center;
+    color:$copyright-color;
+    & b{
+        color: $primary-color;
+    }
 }
