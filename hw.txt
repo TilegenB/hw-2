@@ -1,0 +1,24 @@
+2.2
+body { font-size: 16px }  1em = 16px 
+    h1 { font-size:2em} 16px * 2em = 32px 
+em
+    h1 { 
+    font-size:2em; //16px;
+    margin-bottom:1em; // 32px    
+    }
+
+rem 
+    h1 {
+    font-size:2rem; 
+    margin-bottom:1em; // 16px            
+    }
+
+2.3 (.jpg/jpeg .png .svg .gif)
+1) jpg/jpeg Это растровая картинка ее использует в многоцветных и не прозрачных картинках
+2) png Это тоже растровая картинка ее использует в чертежах или в малоцветных картинках и когда нужен прозрачный фон 
+3) svg это уже векторная картинка если ее масштабировать она не теряет в качестве она используется в основном в иконках у svg есть некотрые нюансы 
+4) gif это анимированя картинка 
+
+2.4 background-clip, background-origin. 
+background-origin нужен чтобы как будет выводится background-color или background-img под рамками или под контентом или под padding 
+background-clip похож на background-origin отличия clip обрезает картинку нужен чтобы как будет выводится background-color или background-img под рамками или под контентом или под padding 
